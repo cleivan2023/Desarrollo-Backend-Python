@@ -28,3 +28,15 @@ print("La edad es: ", edad)    # imprime la edad es :xx
  
 edad = int(input("Ingrese edad: "))
 print("La edad es: " + edad)
+
+
+""" resultado del ejercicio 2 de la distancia """
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+distancia = ((x2-x1)**2 + (y2-y1)** (1/2))
+
+print(distancia)

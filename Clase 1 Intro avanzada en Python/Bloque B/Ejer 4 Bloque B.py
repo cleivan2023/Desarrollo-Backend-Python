@@ -34,3 +34,17 @@ def determinar_numero_menor():
 
 # Llamar a la función
 determinar_numero_menor()
+
+##################################### de otra forma en clases###
+
+FIN = False
+mayor = float("-inf")
+while not FIN:
+    valor = input("ingrese numero: ")
+
+    if valor == "FIN":
+        FIN = True
+    else:
+        if float(valor) > mayor:
+            mayor = float(valor)
+    print("mayor hasta el momento es:", mayor)

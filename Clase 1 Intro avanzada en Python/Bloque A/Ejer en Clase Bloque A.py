@@ -8,4 +8,5 @@ y2 = int(input("Ingrese la coordenada y del segundo punto: "))
 
 distancia = ((x2-x1) **2 + (y2-y1) **2) ** (1/2)
 
+# para ejemplo que ocupan los valores de 0 0 3 4 y da como resultado 5.0
 print(distancia)

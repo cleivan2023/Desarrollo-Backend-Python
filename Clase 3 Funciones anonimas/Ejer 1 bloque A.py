@@ -28,3 +28,5 @@ Si x = -8, la función hace -(-8) = 8."""
 print((lambda x: abs(x))(-100))
 
 print((lambda x: x if(x>=0) else -x)(-19))
+
+

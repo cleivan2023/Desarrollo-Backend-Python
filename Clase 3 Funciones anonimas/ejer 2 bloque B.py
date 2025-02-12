@@ -19,11 +19,26 @@ vientos_nudos = {
     "15 horas": float(input("Ingrese el viento registrado en las últimas 15 horas (nudos): "))
 }
 
+#Pedimos el nombre de la estación (estacion).
+#Guardamos los vientos en nudos en un diccionario (vientos_nudos) con claves "5 horas", "10 horas", "15 horas".
+#Convertimos los valores a float() para permitir decimales.
+
 # 2️⃣ Convertir nudos a km/h usando map()
 vientos_kmh = dict(map(lambda x: (x[0], x[1] * FACTOR_CONVERSION), vientos_nudos.items()))
+
+# Aquí usamos map() para convertir cada velocidad:
+#x[0] → clave (ej: "5 horas").
+#x[1] * 1.852 → valor convertido a km/h.
+#dict(...) convierte el resultado de map() en un diccionario nuevo.
+#Ejemplo de conversión si el usuario ingresa 6 nudos para "5 horas":
+#6 * 1.852 = 11.11 km/h ✅
 
 # 3️⃣ Mostrar resultados
 print(f"\n📍 Estación: {estacion}")
 print("🌬️ Vientos registrados (km/h):")
 for tiempo, velocidad in vientos_kmh.items():
     print(f"   - {tiempo}: {velocidad:.2f} km/h")
+
+#Muestra el nombre de la estación.
+#Recorremos el diccionario vientos_kmh e imprimimos cada tiempo con su velocidad en km/h.
+#:.2f → Redondea a 2 decimales.

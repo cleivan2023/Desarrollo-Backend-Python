@@ -14,7 +14,7 @@ print(x.get_nombre())  # Se llama al método de la instancia
 
 # Definir una clase con constructor:
 class Persona:
-    def __init__(self,nombre): # Constructor con el parámetro 'nombre
+    def __init__(self,nombre): # el init es el metodo Constructor con el parámetro 'nombre
         self.nombre = nombre  # Asignación del atributo
 
     def get_nombre(self):  # Se agrega 'self' al método

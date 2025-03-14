@@ -1,4 +1,4 @@
-""" Creaccion de tarjeta de credito"""
+""" Creaccion de tarjeta de credito, basica"""
 
 class Pago:
     def __init__(self, tarjeta):
@@ -11,7 +11,7 @@ class Pago:
             return False
 
 class TarjetaCredito:
-    def __init__(self, nombre, fecha_vto, numero, codigo):
+    def __init__(self, nombre, fecha_vto, numero, codigo): #atributos
         self.nombre = nombre
         self.fecha_vto = fecha_vto
         self.numero = numero

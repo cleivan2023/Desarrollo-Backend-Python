@@ -8,7 +8,7 @@ def home():
 
 @app.route('/welcome')
 def bienvenido():
-    return render_template('home.html', nombre=' Juam')
+    return render_template('home.html', nombre=' Juan')
 
 if __name__ == '__main__':
     app.run(debug=True)

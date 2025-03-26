@@ -1,0 +1,39 @@
+<a href="/">Home</a> | <a href="{{ url_for('about') }}">About</a> |
+<a href="/perfil?nombre=Andre&profesion=matrona&edad=76">Perfil</a> |
+<a href="{{ url_for('anuncio') }}">Ingresar Anuncio</a> |
+<a href="{{ url_for('anuncios') }}">Anuncios</a>
+
+<br><br>
+<h3>ANUNCIO!</h3>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<form action="/anuncio" method="post">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" name="titulo">
+    <br><br>
+    <label for="contenido">Contenido:</label>
+    <textarea id="contenido" name="contenido"></textarea>
+    <br><br>
+    <label for="prioridad">Prioridad:</label>
+    <select id="prioridad" name="prioridad">
+        <option value="alta">Alta</option>
+        <option value="media" selected>Media</option>
+        <option value="baja">Baja</option>
+    </select>
+    <br><br>
+    <button type="submit">Enviar</button>
+</form>
+
+
+
+
+
